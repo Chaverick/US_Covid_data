@@ -3,7 +3,7 @@ async function fetchData() {
     const record = await res.json();
     console.log(record);
     document.getElementById("country").innerHTML=record.country;
-    document.getElementById("metrics.weeklyNewCasesPer100k").innerHTML=record.weeklyNewCasesPer100k;
+    document.getElementById("metrics.weeklyNewCasesPer100k").innerHTML=record.metrics.weeklyNewCasesPer100k;
     document.getElementById("actuals.deaths").innerHTML=record.actuals.deaths;
 }
 fetchData();
